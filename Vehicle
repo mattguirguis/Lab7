@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab.pkg7;
+
+/**
+ *
+ * @author matthew
+ */
+
+public abstract class Vehicle {
+    private String owner;
+    private int wheels;
+    
+
+//Overloaded Constructor
+public Vehicle(String newOwner,int newWheels){
+    owner=newOwner;
+    wheels=newWheels;
+    
+}
+public String getOwner(){
+    return owner;
+}
+public int getWheels(){
+        return wheels;
+}
+public void setOwner(String newOwner){
+    owner=newOwner;
+}
+public void setWheels(int newWheels){
+    wheels=newWheels;
+}
+public abstract double horsePower(); 
+
+@Override
+public String toString(){
+    return  "Owner: " + owner
+           + "\nWheels: " + wheels; 
+    
+}
+@Override
+public boolean equals(Object o){
+            if(!( o instanceof Vehicle))
+            return false;
+             else
+        {    Vehicle objVehicle = (Vehicle) o; 
+            if (owner == objVehicle.owner)
+                return true;
+            else if (wheels == objVehicle.wheels)
+                return true;
+            else
+                return false;
+}
+}
+}
