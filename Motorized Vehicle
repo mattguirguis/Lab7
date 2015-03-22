@@ -1,0 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab.pkg7;
+
+/**
+ *
+ * @author matthew
+ */
+public class MotorizedVehicle extends Vehicle {
+private double volumeDisplacement;
+    
+public MotorizedVehicle(String newOwner, int newWheels, double newVolumeDisplacement)
+{
+    super(owner,wheels);
+    owner=newOwner;
+    wheels=newWheels;
+    volumeDisplacement=newVolumeDisplacement;
+    
+}
+        
+}
